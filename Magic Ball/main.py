@@ -1,10 +1,6 @@
 import random
 
 
-def choice(sp):
-    return sp[random.randrange(len(sp))]
-
-
 def ask():
     while True:
         s = input('Не хотите ли задать ещё один вопрос? (y/n)\n')
@@ -23,7 +19,7 @@ name = input('Ваше имя?\n')
 print('Привет, ', name, ', я магический шар, и я знаю ответ на любой твой вопрос.', sep='')
 input('Спрашивай!\n')
 while flag_end is False:
-    print(choice(answers))
+    print(random.choice(answers))
     if not ask():
         break
 print('Возвращайся если возникнут вопросы!')
